@@ -90,17 +90,23 @@ public class PracticeN1 {
             }
         }
 
-        String[] wordWithCARR = wordWithC.split(" ");
-        System.out.println("Number of distinct words that start with C: " + wordWithCARR.length);
-        //"Number of words that start with C: 334
+
+
+
 
         for (int i = 0; i < distincts.length; i++) {
 
-            if (words[i].startsWith("c") || words[i].startsWith("C")) {
+            if (words[i].startsWith("C")) {
                 wordWithC = wordWithC + words[i] + " ";
 
             }
         }
+
+        String[] wordWithCARR = wordWithC.split(" ");
+
+        System.out.println("Number of distinct words that start with C: " + wordWithCARR.length);
+
+        //"Number of words that start with C: 350
 
         int[] hasArrDis = new int[distincts.length];
         for (int i = 0; i < distincts.length; i++) {
@@ -114,6 +120,7 @@ public class PracticeN1 {
         for (int i = 0; i < hasArrDis.length - 1; i++) {
             if (hasArrDis[i] == hasArrDis[i + 1]) {
                 hashCountDistinct++;
+                System.out.println();
             }
         }
         System.out.println("Number of equal hashes in distinct words: " + hashCountDistinct);
