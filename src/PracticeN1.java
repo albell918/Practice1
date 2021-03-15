@@ -1,6 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 /**
  * @author Bieliaiev Oleksandr
@@ -10,6 +13,7 @@ import java.nio.file.Paths;
  * @since 15.03.2021 - 19.03
  */
 public class PracticeN1 {
+
 
     public static void main(String[] args) throws IOException {
 
@@ -92,6 +96,23 @@ public class PracticeN1 {
         String[] wordWithCARR = wordWithC.split(" ");
         System.out.println("Number of distinct words that start with C: " + wordWithCARR.length);
         //"Number of words that start with C: 334
+
+        for (int i = 0; i < distincts.length; i++) {
+
+            if (words[i].startsWith("c") || words[i].startsWith("C")) {
+                wordWithC = wordWithC + words[i] + " ";
+
+            }
+        }
+
+        int[] hasArr = new int[words.length];
+        for (int i = 0; i < words.length; i++) {
+            hasArr[i] = words[i].hashCode();
+        }
+
+        Arrays.sort(hasArr);
+
+
 
 
     }
