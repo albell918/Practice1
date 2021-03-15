@@ -84,7 +84,7 @@ public class PracticeN1 {
 
         for (int i = 0; i < distincts.length; i++) {
 
-            if (words[i].startsWith("c") || words[i].startsWith("C")) {
+            if (distincts[i].startsWith("C")) {
                 wordWithC = wordWithC + words[i] + " ";
 
             }
@@ -106,7 +106,7 @@ public class PracticeN1 {
 
         System.out.println("Number of distinct words that start with C: " + wordWithCARR.length);
 
-        //"Number of words that start with C: 350
+        //"Number of distinct words that start with C: 76
 
         int[] hasArrDis = new int[distincts.length];
         for (int i = 0; i < distincts.length; i++) {
