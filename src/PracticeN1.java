@@ -42,7 +42,6 @@ public class PracticeN1 {
         int counterHarry = 0;
 
 
-
         for (int i = 0; i < lines.length; i++) {
 
             if (lines[i].contains("Harry")) {
@@ -110,14 +109,16 @@ public class PracticeN1 {
 
         Arrays.sort(hasArrDis);
 
-        int hashCountDistinct =0;
+        int hashCountDistinct = 0;
 
         for (int i = 0; i < hasArrDis.length - 1; i++) {
             if (hasArrDis[i] == hasArrDis[i + 1]) {
                 hashCountDistinct++;
             }
         }
-        System.out.println("Number of equal hashes in distinct words: "+ hashCountDistinct);
+        System.out.println("Number of equal hashes in distinct words: " + hashCountDistinct);
+
+        //Number of equal hashes in distinct words: 1
 
     }
 }
