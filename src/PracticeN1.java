@@ -24,8 +24,6 @@ public class PracticeN1 {
 
         String longest = "";
 
-        System.out.println(text.length());
-
         for (String word : words) {
 
             if (longest.length() < word.length()) {
@@ -105,15 +103,21 @@ public class PracticeN1 {
             }
         }
 
-        int[] hasArr = new int[words.length];
-        for (int i = 0; i < words.length; i++) {
-            hasArr[i] = words[i].hashCode();
+        int[] hasArrDis = new int[distincts.length];
+        for (int i = 0; i < distincts.length; i++) {
+            hasArrDis[i] = distincts[i].hashCode();
         }
 
-        Arrays.sort(hasArr);
+        Arrays.sort(hasArrDis);
 
+        int hashCountDistinct =0;
 
-
+        for (int i = 0; i < hasArrDis.length - 1; i++) {
+            if (hasArrDis[i] == hasArrDis[i + 1]) {
+                hashCountDistinct++;
+            }
+        }
+        System.out.println("Number of equal hashes in distinct words: "+ hashCountDistinct);
 
     }
 }
